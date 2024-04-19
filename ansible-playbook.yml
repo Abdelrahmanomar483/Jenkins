@@ -12,15 +12,15 @@
       ignore_errors: yes
 
     - name: remove comingsoon-image
-      command: docker rmi abdosalah663888/docker/comingsoon-page
+      command: docker rmi abdosalah663888/docker/comingsoon
       ignore_errors: yes
 
     - name: build docker image using the Dockerfile
-      command: docker build -t abdosalah663888/docker:comingsoon  .
+      command: docker build -t abdosalah663888/docker/comingsoon  .
 
     - name: Push Image to dockerhub
-      command: docker push abdosalah663888/docker:comingsoon-page
+      command: docker push abdosalah663888/docker/comingsoon
 
     - name: run container
-      command: docker run -d --name web-container -p 5001:80 abdosalah663888/docker/comingsoon-page
+      command: docker run -d --name web-container -p 5001:80 abdosalah663888/docker/comingsoon
 
