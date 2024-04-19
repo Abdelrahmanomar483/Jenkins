@@ -22,5 +22,5 @@
       command: docker push abdosalah663888/docker:comingsoon
 
     - name: run container
-      command: docker run -d --name web-container -p 5001:80 abdosalah663888/docker/comingsoon
+      command: docker run -d --name web-container -p 5001:80 abdosalah663888/docker:comingsoon
 
